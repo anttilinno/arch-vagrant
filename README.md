@@ -35,3 +35,8 @@ reboot
 # Resize btrfs filesystem
 btrfs filesystem resize max /
 ```
+## How to find network interface name in Windows
+
+```
+'C:\Program Files\Oracle\VirtualBox\VBoxManage.exe' list bridgedifs
+```
