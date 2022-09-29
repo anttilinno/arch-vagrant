@@ -4,7 +4,7 @@
 Vagrant.configure("2") do |config|
     config.vm.box = "archlinux/archlinux"
     config.vm.define "archlinux"
-    config.vm.network "public_network", bridge: "Realtek USB GbE Family Controller"
+    config.vm.network "public_network"
 
     config.vm.disk :disk, size: "100GB", primary: true
 
@@ -14,6 +14,15 @@ Vagrant.configure("2") do |config|
       vb.cpus = 4
       vb.gui = true
       vb.check_guest_additions = false
+      vb.customize ['modifyvm', :id, '--accelerate3d', 'on']
+      vb.customize ['modifyvm', :id, '--graphicscontroller', 'vmsvga']
+      vb.customize ['modifyvm', :id, '--hwvirtex', 'on']
+      vb.customize ['modifyvm', :id, '--ioapic', 'on']
+      vb.customize ['modifyvm', :id, '--vram', '128']
+      vb.customize ['modifyvm', :id, '--audio', 'none']
+      vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
+      vb.customize ["modifyvm", :id, "--usb", "on"]
+      vb.customize ["modifyvm", :id, "--usbehci", "on"]
     end
 
     $script = <<-SCRIPT
