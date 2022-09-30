@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     config.vm.disk :disk, size: "100GB", primary: true
 
     config.vm.provider "virtualbox" do |vb|
-      vb.name = "VagrArch"
+      vb.name = "Archlinux - Vagrant"
       vb.memory = "4096"
       vb.cpus = 4
       vb.gui = true
