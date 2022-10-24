@@ -40,3 +40,11 @@ btrfs filesystem resize max /
 ```
 'C:\Program Files\Oracle\VirtualBox\VBoxManage.exe' list bridgedifs
 ```
+
+## Run the playbook - [Inspiration](https://www.middlewareinventory.com/blog/run-ansible-playbook-locally/)
+
+```
+git clone https://github.com/anttilinno/archlinux-ansible.git
+cd archlinux-ansible
+ansible-playbook -i inventory.yml Ansible-local.yml
+```
