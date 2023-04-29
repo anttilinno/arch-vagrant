@@ -27,9 +27,12 @@ Vagrant.configure("2") do |config|
 
     $script = <<-SCRIPT
     sudo pacman -Sy
+    sudo pacman -S archlinux-keyring --noconfirm
     sudo pacman -Su --noconfirm
     sudo pacman -S ansible git --noconfirm
     ansible-galaxy collection install community.general
+
+    git clone https://github.com/anttilinno/blankarch.git
     SCRIPT
 
     config.vm.provision "shell", inline: $script, privileged: false
