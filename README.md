@@ -44,7 +44,6 @@ btrfs filesystem resize max /
 ## Run the playbook - [Inspiration](https://www.middlewareinventory.com/blog/run-ansible-playbook-locally/)
 
 ```
-git clone https://github.com/anttilinno/archlinux-ansible.git
-cd archlinux-ansible
-ansible-playbook -i inventory.yml Ansible-local.yml
+cd blankarch
+ansible-playbook -i inventory.yml archlinux-playbook.yaml
 ```
