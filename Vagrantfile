@@ -30,7 +30,6 @@ Vagrant.configure("2") do |config|
     sudo pacman -S archlinux-keyring --noconfirm
     sudo pacman -Su --noconfirm
     sudo pacman -S ansible git --noconfirm
-    ansible-galaxy collection install community.general
 
     git clone https://github.com/anttilinno/blankarch.git
     SCRIPT
