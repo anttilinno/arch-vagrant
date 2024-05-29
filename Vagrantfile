@@ -30,8 +30,6 @@ Vagrant.configure("2") do |config|
     sudo pacman -S archlinux-keyring --noconfirm
     sudo pacman -Su --noconfirm
     sudo pacman -S ansible git --noconfirm
-
-    git clone https://github.com/anttilinno/blankarch.git
     SCRIPT
 
     config.vm.provision "shell", inline: $script, privileged: false
